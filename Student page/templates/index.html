@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Details</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Registration</h1>
+    <form method="POST">
+      <label>Name:</label>
+      <input type="text" name="name" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Choose your subjects:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="subjects" value="Math"> Math</label>
+        <label><input type="checkbox" name="subjects" value="Science"> Science</label>
+        <label><input type="checkbox" name="subjects" value="English"> English</label>
+        <label><input type="checkbox" name="subjects" value="History"> History</label>
+        <label><input type="checkbox" name="subjects" value="Computer"> Computer</label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Submission Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h2>Student Details Submitted</h2>
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+
+    <h3>Subjects Selected:</h3>
+    {% if subjects %}
+      <table>
+        <thead>
+          <tr><th>Subject</th></tr>
+        </thead>
+        <tbody>
+          {% for subject in subjects %}
+            <tr><td>{{ subject }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No subjects selected.</p>
+    {% endif %}
+  </div>
+</body>
+</html>
